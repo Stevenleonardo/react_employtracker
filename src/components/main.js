@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import API from "../utils/api";
 import SearchTable from "./searchtable";
 import EmployeeTable from "./employeetable";
+import Result from "./result";
 
 class Main extends Component {
   state = {
@@ -81,6 +82,7 @@ class Main extends Component {
 
         <div className="row">
           <table className="table">
+              <tbody>
             <tr>
               <th scope="col">Photo</th>
               <th>First Name</th>
@@ -88,6 +90,7 @@ class Main extends Component {
               <th scope="col">Email</th>
               <th scope="col">Phone</th>
             </tr>
+            </tbody>
             {[...this.state.result].map((item) =>
               <EmployeeTable
                 picture={item.picture}
