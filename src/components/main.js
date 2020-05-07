@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import API from "../utils/api.js";
-import "";
+import API from "../utils/api";
 import SearchTable from "./searchtable";
 import EmployeeTable from "./employeetable";
 

@@ -4,7 +4,7 @@ function Results(props) {
   return (
     <table className="table">
       {props.results.map(result => (
-        <table>
+        <table style="width:100%">
           <tr>
             <th>Firstname</th>
             <th>Lastname</th>
