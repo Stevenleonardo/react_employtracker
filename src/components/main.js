@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import API from "";
 import "";
-
+import SearchTable from "./searchtable";
+import EmployeeTable from "./employeetable";
 
 class Main extends Component {
   state = {
@@ -24,7 +25,7 @@ class Main extends Component {
             phone: e.phone,
             dob: e.age,
             key: i
-          }))
+         }))
 
         })
      
@@ -71,7 +72,7 @@ class Main extends Component {
         </div>
         <div className="row">
           <div className="col-md-6">
-            <SearchForm
+            <SearchTable
               value={this.state.search}
                handleInputChange={this.handleInputChange}
                handleFormSubmit={this.handleFormSubmit}
@@ -89,7 +90,7 @@ class Main extends Component {
               <th scope="col">Phone</th>
             </tr>
             {[...this.state.result].map((item) =>
-              <EmployeeCard
+              <EmployeeTable
                 picture={item.picture}
                 firstName={item.firstName}
                 lastName={item.lastName}
